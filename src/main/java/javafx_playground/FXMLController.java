@@ -17,10 +17,10 @@ public class FXMLController implements Initializable {
     private Label label;
 
     @Override
-    public void initialize(URL url, ResourceBundle rb) {
+    public void initialize(final URL url, final ResourceBundle rb) {
         // Get the Java version and JavaFX version.
-        String javaVersion = System.getProperty("java.version");
-        String javafxVersion = System.getProperty("javafx.version");
+        final String javaVersion = System.getProperty("java.version");
+        final String javafxVersion = System.getProperty("javafx.version");
         // change the text of the label.
         label.setText("Hello, JavaFX " + javafxVersion + "\nRunning on Java " + javaVersion + ".");
     }
