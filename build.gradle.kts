@@ -1,3 +1,5 @@
+@Suppress("DSL_SCOPE_VIOLATION") // https://youtrack.jetbrains.com/issue/KTIJ-19369
+
 // the plugins block lets us define which gradle plugins we want to use
 plugins {
     // base java plugin tells gradle we want to use java in our project
@@ -20,7 +22,7 @@ dependencies {
     // in order to use @NotNull and @Nullable annotations, we need to add the javax.annotations plugin
     implementation("org.jetbrains:annotations:23.0.0")
     // for executing unit tests, we need to add the junit plugin
-    testImplementation("org.junit.jupiter:junit-jupiter:5.8.2")
+    testImplementation("org.junit.jupiter:junit-jupiter:5.9.2")
 }
 
 // the java block lets us define the java version we want to use
@@ -49,7 +51,7 @@ javafx {
     // The version of JavaFX we want to use
     version = "17.0.1"
     // The modules we want to use
-    modules("javafx.controls", "javafx.fxml")
+    modules("javafx.controls", "javafx.fxml", "javafx.swing", "javafx.graphics", "javafx.base")
 }
 
 // the tasks block lets us define the tasks we want to use
