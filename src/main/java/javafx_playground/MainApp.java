@@ -40,6 +40,8 @@ public class MainApp extends Application {
             // change the color of the label to a random color.
             label.setTextFill(javafx.scene.paint.Color.color(Math.random(), Math.random(), Math.random()));
         });
+        // also change the color of the button text to match the color of the label.
+        button.textFillProperty().bind(label.textFillProperty());
         // make it fit the scene.
         button.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
         // add the button to the center of the root node.
